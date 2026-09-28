@@ -9,6 +9,10 @@ std::unordered_map<std::string, std::vector<Target*>> adj_map;
 std::unordered_map<std::string, int> indegree_counts;
 */
 
+const std::unordered_map<std::string, Target>& Graph::getTargets() {
+    return targets;
+}
+
 void Graph::add_target(const Target& new_target) {
     targets.emplace(new_target.name, new_target);
     indegree_counts[new_target.name];

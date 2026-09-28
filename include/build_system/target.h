@@ -8,4 +8,6 @@ class Target {
         std::string name;
         std::vector<std::string> inputs;
         std::string command;
+
+        Target (std::string name, std::vector<std::string> inputs, std::string command) : name{name}, inputs{inputs}, command{command} {};
 };
