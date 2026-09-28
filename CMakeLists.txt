@@ -18,13 +18,13 @@ FetchContent_MakeAvailable(googletest)
 # without warning and sanitizer flags
 if(MSVC)
   add_compile_options(/W4 /fsanitize=address)
+  add_compile_definitions(_DISABLE_STRING_ANNOTATION _DISABLE_VECTOR_ANNOTATION)
 else()
   add_compile_options(-Wall -Wextra -fsanitize=address -g)
   add_link_options(-fsanitize=address)
 endif()
 
 add_library(build_system_lib STATIC
-  src/target.cpp
   src/graph.cpp
   src/parser.cpp
   src/hasher.cpp

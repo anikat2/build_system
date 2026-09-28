@@ -1,7 +1,7 @@
 #include <stdexcept>
 #include <queue>
 
-#include "graph.h"
+#include "build_system/graph.h"
 
 /* 
 std::unordered_map<std::string, Target> targets;
