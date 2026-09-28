@@ -1,3 +1,5 @@
+#pragma once
+
 #include <unordered_map>
 #include <vector>
 #include <string>
@@ -10,8 +12,8 @@ class Graph {
         std::unordered_map<std::string, std::vector<Target*>> adj_map;
         std::unordered_map<std::string, int> indegree_counts;
     public:
-        void add_target(const Target* new_target);
-        void add_edge(const std::string main, const std::string dependent);
-        bool valid_build();
+        void add_target(const Target& new_target);
+        void add_edge(const std::string& dependency, const std::string& dependent);
+        std::pair<bool, std::vector<std::string>> valid_build();
 };
 
