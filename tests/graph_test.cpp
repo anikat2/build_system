@@ -1,13 +1,6 @@
 #include <gtest/gtest.h>
 #include "build_system/graph.h"
-
-bool appears_before(const std::vector<std::string>& order,
-                     const std::string& before,
-                     const std::string& after) {
-    auto pos_before = std::find(order.begin(), order.end(), before);
-    auto pos_after = std::find(order.begin(), order.end(), after);
-    return pos_before < pos_after;
-}
+#include "test_helpers.h"
 
 TEST(GraphTest, LinearChainIsValid) {
     Graph g;

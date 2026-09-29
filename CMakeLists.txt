@@ -42,6 +42,7 @@ add_executable(build_system_tests
   tests/graph_test.cpp
   tests/parser_test.cpp
   tests/hasher_test.cpp
+  tests/executor_test.cpp
 )
 target_link_libraries(build_system_tests PRIVATE build_system_lib gtest_main)
 gtest_discover_tests(build_system_tests)

@@ -1,0 +1,11 @@
+target: step1.txt
+inputs: 
+command: echo "building step1" > step1.txt
+
+target: step2.txt
+inputs: step1.txt
+command: echo "building step2, using step1" > step2.txt
+
+target: final.txt
+inputs: step2.txt
+command: echo "final output" > final.txt

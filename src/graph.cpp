@@ -22,7 +22,7 @@ void Graph::add_edge(const std::string& dependency, const std::string& dependent
     if (targets.count(dependency) == 0 || targets.count(dependent) == 0) {
         throw std::runtime_error("unknown dependencies -> double check input");
     }
-    Target* d2 = &targets[dependent];
+    Target* d2 = &targets.at(dependent);
 
     adj_map[dependency].push_back(d2);
     indegree_counts[dependent]++;
